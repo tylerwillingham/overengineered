@@ -18,4 +18,6 @@ Gem::Specification.new do |spec|
   end
 
   spec.add_dependency 'rails'
+
+  spec.add_dependency 'frozen_record'
 end
