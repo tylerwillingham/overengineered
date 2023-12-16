@@ -6,7 +6,7 @@
 #
 # bin/packwerk update-todo
 ---
-".":
+components/platform:
   "::ApplicationRecord":
     violations:
     - dependency
