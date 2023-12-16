@@ -69,3 +69,5 @@ end
 gem 'packwerk', '~> 3.1'
 
 gem 'blog', path: 'components/blog'
+
+gem 'public_site', path: 'components/public_site'
