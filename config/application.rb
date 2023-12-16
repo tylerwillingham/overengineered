@@ -5,8 +5,8 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-%w[blog public_site].each do |component_name|
-  require_relative "../components/#{component_name}/lib/#{component_name}/engine.rb"
+Dir.glob('components/*/lib/*/engine.rb').each do |engine_path|
+  require_relative "../#{engine_path}"
 end
 
 module Twilling
