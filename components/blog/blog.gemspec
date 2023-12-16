@@ -1,5 +1,3 @@
-require_relative 'lib/blog/version'
-
 Gem::Specification.new do |spec|
   spec.name        = 'blog'
   spec.version     = '1.0.0'
