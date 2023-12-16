@@ -1,3 +1,9 @@
+PATH
+  remote: components/blog
+  specs:
+    blog (1.0.0)
+      rails
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -265,6 +271,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  blog!
   bootsnap
   capybara
   debug

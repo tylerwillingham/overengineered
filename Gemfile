@@ -68,3 +68,5 @@ group :test do
 end
 
 gem "packwerk", "~> 3.1"
+
+gem 'blog', path: 'components/blog'
