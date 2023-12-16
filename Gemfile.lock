@@ -6,6 +6,12 @@ PATH
       rails
 
 PATH
+  remote: components/platform
+  specs:
+    platform (1.0.0)
+      rails
+
+PATH
   remote: components/public_site
   specs:
     public_site (1.0.0)
@@ -292,6 +298,7 @@ DEPENDENCIES
   jbuilder
   packwerk (~> 3.1)
   pg (~> 1.1)
+  platform!
   public_site!
   puma (>= 5.0)
   rails (~> 7.1.1)

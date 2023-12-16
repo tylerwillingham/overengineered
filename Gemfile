@@ -18,6 +18,7 @@ gem 'tzinfo-data', platforms: %i[windows jruby]
 
 group :components do
   gem 'blog', path: 'components/blog'
+  gem 'platform', path: 'components/platform'
   gem 'public_site', path: 'components/public_site'
 end
 
