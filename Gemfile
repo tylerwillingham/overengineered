@@ -28,6 +28,7 @@ end
 
 group :development do
   gem 'annotate'
+  gem 'rubocop'
   gem 'web-console'
 end
 
