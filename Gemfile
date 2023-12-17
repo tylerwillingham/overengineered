@@ -9,7 +9,6 @@ gem 'rails', '~> 7.1.1'
 
 gem 'bootsnap', require: false
 gem 'importmap-rails'
-gem 'jbuilder'
 gem 'packwerk', '~> 3.1'
 gem 'pg', '~> 1.1'
 gem 'puma', '>= 5.0'

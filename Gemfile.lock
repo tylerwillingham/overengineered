@@ -146,9 +146,6 @@ GEM
     irb (1.8.3)
       rdoc
       reline (>= 0.3.8)
-    jbuilder (2.11.5)
-      actionview (>= 5.0.0)
-      activesupport (>= 5.0.0)
     json (2.7.1)
     language_server-protocol (3.17.0.3)
     loofah (2.21.4)
@@ -336,7 +333,6 @@ DEPENDENCIES
   capybara
   debug
   importmap-rails
-  jbuilder
   packwerk (~> 3.1)
   pg (~> 1.1)
   platform!
