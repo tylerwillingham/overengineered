@@ -1,4 +1,4 @@
-name: RuboCop
+name: 💄 RuboCop
 
 on: [push, pull_request]
 
