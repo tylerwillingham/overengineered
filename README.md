@@ -15,3 +15,5 @@ There are two key types of packages in this repository:
 
 - Interface packages (i.e. components/public_site)
 - Domain packages (i.e. components/blog)
+
+External library dependencies are managed via the root Gemfile for broadly applicable dependencies (like rspec) and more specific domain/interface dependencies are added via the components' gemspecs. These are loosely versioned and bundler reconciles everything in the standard ./Gemfile.lock
