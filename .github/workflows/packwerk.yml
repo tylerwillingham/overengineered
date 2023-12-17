@@ -1,0 +1,25 @@
+name: 📦 Packwerk
+
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Ruby 3.2
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 3.2
+        bundler-cache: true
+
+    - name: Packwerk check
+      run: bin/packwerk check
+
+    - name: Packwerk validate
+      run: bin/packwerk validate
