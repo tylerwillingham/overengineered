@@ -1,0 +1,17 @@
+<section>
+  <header>
+    <h1>Latest posts</h1>
+  </header>
+
+  <section>
+    <% if @posts.none? %>
+      <div>There aren't any posts yet!</div>
+    <% end %>
+
+    <% @posts.each do |post| %>
+      <article>
+        <h2><%= post.title %></h2>
+      </article>
+    <% end %>
+  </section>
+</section>
