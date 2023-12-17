@@ -1,5 +1,7 @@
-require "public_site/version"
-require "public_site/engine"
+# frozen_string_literal: true
+
+require 'public_site/version'
+require 'public_site/engine'
 
 module PublicSite
   # Your code goes here...
