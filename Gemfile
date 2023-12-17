@@ -30,7 +30,7 @@ end
 group :development do
   gem 'annotate'
   gem 'rubocop', require: false
-  gem 'rubocop-rails'
+  gem 'rubocop-rails', require: false
   gem 'web-console'
 end
 
