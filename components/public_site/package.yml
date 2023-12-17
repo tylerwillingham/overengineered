@@ -1,1 +1,4 @@
 enforce_dependencies: strict
+
+dependencies:
+  - components/blog
