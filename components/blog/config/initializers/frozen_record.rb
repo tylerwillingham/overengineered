@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'frozen_record'
 
 Rails.application.config.to_prepare do
