@@ -15,7 +15,6 @@ gem 'puma', '>= 5.0'
 gem 'sprockets-rails'
 gem 'stimulus-rails'
 gem 'turbo-rails'
-gem 'tzinfo-data', platforms: %i[windows jruby]
 
 group :components do
   gem 'blog', path: 'components/blog'
