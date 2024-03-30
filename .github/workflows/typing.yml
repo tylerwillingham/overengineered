@@ -1,0 +1,43 @@
+name: Ruby typing
+
+on: [push]
+
+permissions:
+  contents: read
+
+env:
+  RAILS_ENV: test
+
+jobs:
+  Tapioca:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Ruby 3.2
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 3.2.2
+        bundler-cache: true
+
+    - name: Verify Gems
+      run: bin/tapioca gems --verify
+
+    - name: Verify DSL
+      run: bin/tapioca dsl --verify
+
+  Sorbet:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Ruby 3.2
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 3.2.2
+        bundler-cache: true
+
+    - name: Typechecking
+      run: bin/srb tc
