@@ -5,12 +5,23 @@ on: [push]
 permissions:
   contents: read
 
-env:
-  RAILS_ENV: test
-
 jobs:
   Tapioca:
     runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:16.2
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
 
     steps:
     - uses: actions/checkout@v4
@@ -20,6 +31,9 @@ jobs:
       with:
         ruby-version: 3.2.2
         bundler-cache: true
+
+    - name: Create databases
+      run: bin/rails db:setup
 
     - name: Verify Gems
       run: bin/tapioca gems --verify

@@ -1,8 +1,9 @@
 shared:
   adapter: postgresql
   encoding: unicode
+  host: <%= ENV.fetch("PRIMARY_DATABASE_HOST") { "localhost" } %>
+  password: <%= ENV.fetch("PRIMARY_DATABASE_USERNAME") { "postgres" } %>
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: <%= ENV.fetch("PRIMARY_DATABASE_USERNAME") { "postgres" } %>
   username: <%= ENV.fetch("PRIMARY_DATABASE_PASSWORD") { "postgres" } %>
 
 development:

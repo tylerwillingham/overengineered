@@ -2,6 +2,9 @@ name: ✅ RSpec
 
 on: [push]
 
+env:
+  RAILS_ENV: test
+
 permissions:
   contents: read
 
@@ -24,6 +27,20 @@ jobs:
   Component-Specs:
     runs-on: ubuntu-latest
 
+    services:
+      postgres:
+        image: postgres:16.2
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
     steps:
     - uses: actions/checkout@v4
 
@@ -32,6 +49,9 @@ jobs:
       with:
         ruby-version: 3.2.2
         bundler-cache: true
+
+    - name: Database setup
+      run: bin/rails db:setup
 
     - name: Run top-level specs
       run: bin/rspec components/
