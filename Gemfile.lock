@@ -297,6 +297,7 @@ GEM
       sorbet-static (= 0.5.11156)
     sorbet-runtime (0.5.11156)
     sorbet-static (0.5.11156-universal-darwin)
+    sorbet-static (0.5.11156-x86_64-linux)
     sorbet-static-and-runtime (0.5.11156)
       sorbet (= 0.5.11156)
       sorbet-runtime (= 0.5.11156)
@@ -364,6 +365,7 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
+  frozen_record
   importmap-rails
   packwerk (~> 3.1)
   pg (~> 1.1)
