@@ -8,6 +8,7 @@ ruby '3.2.2'
 gem 'rails', '~> 7.1.1'
 
 gem 'bootsnap', require: false
+gem 'frozen_record'
 gem 'importmap-rails'
 gem 'packwerk', '~> 3.1'
 gem 'pg', '~> 1.1'
