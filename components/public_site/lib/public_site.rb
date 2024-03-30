@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'public_site/version'
 require 'public_site/engine'
 
 module PublicSite
