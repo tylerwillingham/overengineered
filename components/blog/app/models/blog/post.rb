@@ -14,6 +14,7 @@
 #
 module Blog
   class Post < ::ApplicationRecord
+    sig { returns(::Blog::Author) }
     def author
       ::Blog::Author.first
     end
