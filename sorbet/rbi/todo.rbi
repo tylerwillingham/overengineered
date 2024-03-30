@@ -3,5 +3,3 @@
 # Please instead update this file by running `bin/tapioca todo`.
 
 # typed: false
-
-module ::FrozenRecord::Base; end
