@@ -12,6 +12,7 @@ gem 'importmap-rails'
 gem 'packwerk', '~> 3.1'
 gem 'pg', '~> 1.1'
 gem 'puma', '>= 5.0'
+gem 'sorbet-static-and-runtime'
 gem 'sprockets-rails'
 gem 'stimulus-rails'
 gem 'turbo-rails'
@@ -25,6 +26,7 @@ end
 group :development, :test do
   gem 'debug', platforms: %i[mri windows]
   gem 'rspec-rails'
+  gem 'tapioca', require: false
 end
 
 group :development do
