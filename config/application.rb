@@ -29,5 +29,7 @@ module Twilling
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    config.semantic_logger.application = 'twilling.io'
   end
 end
