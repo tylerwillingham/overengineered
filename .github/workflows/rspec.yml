@@ -9,22 +9,7 @@ permissions:
   contents: read
 
 jobs:
-  App-Specs:
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v4
-
-    - name: Set up Ruby 3.2
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: 3.2.2
-        bundler-cache: true
-
-    - name: Run top-level specs
-      run: bin/rspec spec/
-
-  Component-Specs:
+  Specs:
     runs-on: ubuntu-latest
 
     services:
@@ -41,17 +26,19 @@ jobs:
           --health-timeout 5s
           --health-retries 5
 
+    strategy:
+      matrix:
+        directory: [spec, components]
+
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    - name: Set up Ruby 3.2
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: 3.2.2
-        bundler-cache: true
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.2.2
+          bundler-cache: true
 
-    - name: Database setup
-      run: bin/rails db:setup
+      - run: bin/rails db:setup
 
-    - name: Run top-level specs
-      run: bin/rspec components/
+      - name: Run specs
+        run: bin/rspec ${{ matrix.directory }}/
