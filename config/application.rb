@@ -31,5 +31,8 @@ module Twilling
     # config.eager_load_paths << Rails.root.join("extras")
 
     config.semantic_logger.application = 'twilling.io'
+    config.log_tags = {
+      request_id: :request_id
+    }
   end
 end
